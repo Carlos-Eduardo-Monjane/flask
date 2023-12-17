@@ -10,6 +10,22 @@ def index():
 def hello_world():
     return jsonify({'message': 'Olá mazza charles!'})
 
+@app.route('/perguntar1', methods=['POST'])
+def postt():
+    from bardapi import Bard
+    import os
+    os.environ["_BARD_API_KEY"]="eQgaoLKfSx5xmduYq_HwnXYOJCB4Tr1XalQq32s-zqMJG96aeB_GqNC24JTyjrBVmG60PQ."
+    def get_resp(message):
+        try:
+            resp=Bard().get_answer(message)["content"]
+            return resp
+        except Exception:
+            resp=Bard().get_answer(message)["content"]
+            return resp
+    
+    print(get_resp("quem é messi"))
+    return jsonify({'message': get_resp("quem é messi")})
+
 @app.route('/perguntar', methods=['POST'])
 def post():
     import requests
