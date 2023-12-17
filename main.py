@@ -10,6 +10,11 @@ def index():
 def hello_world():
     return jsonify({'message': 'Olá mazza charles!'})
 
+@app.route('/perguntar', methods=['POST'])
+def post():
+    data = request.get_json()
+    return jsonify(data)
+
 if __name__ == '__main__':
   app.run(port=5000)
 
