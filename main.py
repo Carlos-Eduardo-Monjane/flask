@@ -33,12 +33,12 @@ def post():
     from bardapi import Bard
 
     token = "eQgaoLKfSx5xmduYq_HwnXYOJCB4Tr1XalQq32s-zqMJG96aeB_GqNC24JTyjrBVmG60PQ."
-
+    
     session = requests.Session()
     session.headers = SESSION_HEADERS
     session.cookies.set("__Secure-1PSID", token)
-    session.cookies.set("__Secure-1PSIDTS","sidts-CjIBPVxjSlo377k3v2NAsN2M6g-XXbqziSbyDFGDpzHocuxX43wIGtxCP1-7q4u-tPQLKRAA")
-    session.cookies.set("__Secure-1PSIDCC","ABTWhQHSxdksLdP6b5Af0gLU3WMbo7ZzC5fGRTUC-8wNaM90vzmKvhNFIydZ-6aqCturZy5oQfg")
+    session.cookies.set("__Secure-1PSIDTS","sidts-CjIBPVxjSiiLe8A1mzGv2uC9ZDhnByUiIkBQi36UUGhvs7eDxWrOZNllmpbCTr6lPOdX5xAA")
+    session.cookies.set("__Secure-1PSIDCC","ABTWhQHYqWkZT6h4Mme1OM-vLq1LioS6ldP6Q3wvvG8DOGTXlrl2Fkk2zmx4BZwLxDSkPBrv4-c")
 
     bard = Bard(token=token, session=session)
 
