@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS 
+from flask_cors import CORS
+from flask_cors import cross_origin 
 
 app = Flask(__name__)
 CORS(app)
@@ -13,6 +14,7 @@ def hello_world():
     return jsonify({'message': 'Olá mazza charles!'})
 
 @app.route('/perguntar', methods=['POST'])
+@cross_origin(origins=['http://localhost:8080'], supports_credentials=True)
 def post():
     import requests
     from bardapi import SESSION_HEADERS
