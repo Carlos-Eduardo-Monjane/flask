@@ -23,8 +23,8 @@ def post():
     session = requests.Session()
     session.headers = SESSION_HEADERS
     session.cookies.set("__Secure-1PSID", token)
-    session.cookies.set("__Secure-1PSIDTS","sidts-CjIBPVxjSufyxh6DwguxLkkNj1bDAfLzXGdg0UDrE9-btvSmL939wPH5RMVXbTiQyn4cWRAA")
-    session.cookies.set("__Secure-1PSIDCC","ABTWhQG-SOCttrXiTUBakFE_XUwwvXV3mmo77RZ5gJSWjapJQ54-WyXLqf2LEapesVwy2QM_Qg")
+    session.cookies.set("__Secure-1PSIDTS","sidts-CjIBPVxjSue9psMv7sConjrI6pkhif5G9S2kFPFqmwPsSlEGfigTbSzyxMAZmuHT-zWjZhAA")
+    session.cookies.set("__Secure-1PSIDCC","ABTWhQGojwXnhdFzvHCYXLoFj1r_sKMcmkTjxkKuHIbNKeMpA9s18foONOg_k7JhCk2V98ff2w")
 
     bard = Bard(token=token, session=session)
 
