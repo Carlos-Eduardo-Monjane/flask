@@ -14,7 +14,6 @@ def hello_world():
     return jsonify({'message': 'Olá mazza charles!'})
 
 @app.route('/perguntar', methods=['POST'])
-@cross_origin(origins=['http://localhost:8080'], supports_credentials=True)
 def post():
     import requests
     from bardapi import SESSION_HEADERS
